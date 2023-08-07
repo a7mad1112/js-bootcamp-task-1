@@ -122,13 +122,23 @@ const arrayUsers = Object.keys(users).map((name) => ({ name, ...users[name] }));
 
 
 // Task 1: Find the person with the most skills in the users object and print their name
+/*
 const findPersonMostSkills = function(users){
   return users.reduce((acc, curr) => curr.skills?.length > acc.skills?.length ? curr : acc, users[0])
 }
 const mostSkilledPerson = findPersonMostSkills(arrayUsers);
 console.log(`The person with the most skills is: `, mostSkilledPerson);
+*/
+
 
 // Task 2: Count the number of logged-in users and users with points greater than or equal to 50, then print both counts.
 const loggedUsersCount = arrayUsers.reduce((acc, curr) => curr.isLoggedIn && curr.points >= 50 ? acc + 1 : acc, 0)
 console.log("Logged Person Count: " + loggedUsersCount)
 
+// Task 3: Find and print the names of people who are MERN stack developers from the users object.
+// Task 4: Return the users that are MERN Stack developers using High Order Function -> Filter().
+const findMernDevelopers = (arrayUsers) => {
+  const skillsRequired = ["MongoDB", "Express", "React", "Node"];
+  return arrayUsers.filter(user => skillsRequired.every(skillRequired => user.skills.includes(skillRequired)))
+};
+console.log("MERN stack developers:", findMernDevelopers(arrayUsers));
