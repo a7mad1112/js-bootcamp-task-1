@@ -97,7 +97,16 @@ console.log(users);
 */
 
 // Task 6: Get all the keys or properties of the users object and print them.
+/*
 Object.keys(users).forEach((name) => {
   console.log(name);
+});
+*/
+
+// Task 7: Get all the values of the users object and print them.
+// print users
+Object.keys(users).forEach((name, i) => {
+  console.log(`\n\nUser ${i}: `);
+  console.log(users[name]);
 });
 
