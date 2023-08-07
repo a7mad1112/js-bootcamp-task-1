@@ -105,8 +105,17 @@ Object.keys(users).forEach((name) => {
 
 // Task 7: Get all the values of the users object and print them.
 // print users
+
+/*
 Object.keys(users).forEach((name, i) => {
   console.log(`\n\nUser ${i}: `);
   console.log(users[name]);
 });
+*/
 
+
+// because we are working with nested objects, the sol is long and complex,
+// so we can do one another sol
+// we can copy users object and make array contain users objects
+// this will easier because the arrays easier to deal with
+const arrayUsers = Object.keys(users).map((name) => ({ name, ...users[name] }));
