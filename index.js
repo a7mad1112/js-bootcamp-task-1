@@ -132,6 +132,7 @@ console.log(`The person with the most skills is: `, mostSkilledPerson);
 
 
 // Task 2: Count the number of logged-in users and users with points greater than or equal to 50, then print both counts.
+/*
 const loggedUsersCount = arrayUsers.reduce((acc, curr) => curr.isLoggedIn && curr.points >= 50 ? acc + 1 : acc, 0)
 console.log("Logged Person Count: " + loggedUsersCount)
 
@@ -142,3 +143,40 @@ const findMernDevelopers = (arrayUsers) => {
   return arrayUsers.filter(user => skillsRequired.every(skillRequired => user.skills.includes(skillRequired)))
 };
 console.log("MERN stack developers:", findMernDevelopers(arrayUsers));
+*/
+
+
+
+// Task 5:  Add your name as a user in the users object, including your email, skills, age, login status,
+// and points. Print the updated users object with your name added.
+const ahmed = {
+  name: "Ahmed Alawneh",
+  email: "ahmalawneh79@gmail.com",
+  skills: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Bootstrap",
+    "React",
+    "Pug.js",
+    "Json/Ajax",
+    "MUI",
+    "SASS",
+    "Redux",
+    "Recoil",
+    "React testing RTL",
+    "Jest",
+    "typeScript",
+    "storyBook",
+    "ui/ux",
+    "figma",
+    "Node",
+    "PostgresSql",
+  ],
+  age: 20,
+  isLoggedIn: false,
+  points: 40,
+};
+
+arrayUsers.push(ahmed);
+console.log(arrayUsers);
