@@ -119,3 +119,11 @@ Object.keys(users).forEach((name, i) => {
 // we can copy users object and make array contain users objects
 // this will easier because the arrays easier to deal with
 const arrayUsers = Object.keys(users).map((name) => ({ name, ...users[name] }));
+
+
+// Task 1: Find the person with the most skills in the users object and print their name
+const findPersonMostSkills = function(users){
+  return users.reduce((acc, curr) => curr.skills?.length > acc.skills?.length ? curr : acc, users[0])
+}
+const mostSkilledPerson = findPersonMostSkills(arrayUsers);
+console.log(`The person with the most skills is: `, mostSkilledPerson);
