@@ -21,6 +21,32 @@ console.log(`The person with the most skills is: ${mostSkilledPerson[0]}`);
 
 
 // Task 2: Count the number of logged-in users and users with points greater than or equal to 50, then print both counts.
-
+/*
 const loggedUsersCount = Object.keys(users).reduce((acc, curr) => users[curr].isLoggedIn && users[curr].points >= 50 ? acc + 1 : acc, 0)
 console.log("Logged Person Count: " + loggedUsersCount)
+*/
+
+
+// Task 3: Find and print the names of people who are MERN stack developers from the users object.
+// M => MongoDB
+// E => Express
+// R => React
+// N => Node
+
+function findMernDevelopers(users) {
+  const skillsRequired = ["MongoDB", "Express", "React", "Node"];
+  const mernDevelopers = [];
+  for (const key in users) {
+    const { skills } = users[key];
+    // check if all required skills exist:
+    const check = skillsRequired.every((skillRequired) =>
+      skills.includes(skillRequired)
+    );
+    if (check) {
+      mernDevelopers.push(key);
+    }
+  }
+  return mernDevelopers;
+}
+
+console.log("MERN stack developers:", findMernDevelopers(users));
