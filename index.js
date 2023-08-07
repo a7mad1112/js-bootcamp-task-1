@@ -149,6 +149,7 @@ console.log("MERN stack developers:", findMernDevelopers(arrayUsers));
 
 // Task 5:  Add your name as a user in the users object, including your email, skills, age, login status,
 // and points. Print the updated users object with your name added.
+/*
 const ahmed = {
   name: "Ahmed Alawneh",
   email: "ahmalawneh79@gmail.com",
@@ -180,3 +181,10 @@ const ahmed = {
 
 arrayUsers.push(ahmed);
 console.log(arrayUsers);
+*/
+
+// Task 6: Get all the keys or properties of the users object and print them.
+// now users become array so we cannot do that, but we can get keys of any user object
+Object.keys(arrayUsers[0]).forEach((name) => {
+  console.log(name);
+});
