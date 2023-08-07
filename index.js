@@ -63,6 +63,7 @@ console.log("MERN stack developers:", filteredUsers);
 // Task 5:  Add your name as a user in the users object, including your email, skills, age, login status,
 // and points. Print the updated users object with your name added.
 
+/*
 const ahmed = {
   email: "ahmalawneh79@gmail.com",
   skills: [
@@ -93,3 +94,10 @@ const ahmed = {
 
 users.ahmed = ahmed;
 console.log(users);
+*/
+
+// Task 6: Get all the keys or properties of the users object and print them.
+Object.keys(users).forEach((name) => {
+  console.log(name);
+});
+
