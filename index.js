@@ -53,7 +53,43 @@ console.log("MERN stack developers:", findMernDevelopers(users));
 */
 
 // Task 4: Return the users that are MERN Stack developers using High Order Function -> Filter().
+/*
 const skillsRequired = ["MongoDB", "Express", "React", "Node"];
 const filteredUsers = Object.keys(users).filter(name => skillsRequired.every(skillRequired => users[name].skills.includes(skillRequired)));
 
 console.log("MERN stack developers:", filteredUsers);
+*/
+
+// Task 5:  Add your name as a user in the users object, including your email, skills, age, login status,
+// and points. Print the updated users object with your name added.
+
+const ahmed = {
+  email: "ahmalawneh79@gmail.com",
+  skills: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Bootstrap",
+    "React",
+    "Pug.js",
+    "Json/Ajax",
+    "MUI",
+    "SASS",
+    "Redux",
+    "Recoil",
+    "React testing RTL",
+    "Jest",
+    "typeScript",
+    "storyBook",
+    "ui/ux",
+    "figma",
+    "Node",
+    "PostgresSql",
+  ],
+  age: 20,
+  isLoggedIn: false,
+  points: 40,
+};
+
+users.ahmed = ahmed;
+console.log(users);
