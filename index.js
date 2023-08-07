@@ -185,6 +185,16 @@ console.log(arrayUsers);
 
 // Task 6: Get all the keys or properties of the users object and print them.
 // now users become array so we cannot do that, but we can get keys of any user object
+/*
 Object.keys(arrayUsers[0]).forEach((name) => {
   console.log(name);
+});
+*/
+
+// Task 7: Get all the values of the users object and print them.
+// now users become array so we cannot do that, but we can get values of any user object
+
+Object.keys(arrayUsers[0]).forEach((name, i) => {
+  console.log(`\n\n${name} key: `);
+  console.log("Value: ", arrayUsers[0][name]);
 });
