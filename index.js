@@ -32,7 +32,7 @@ console.log("Logged Person Count: " + loggedUsersCount)
 // E => Express
 // R => React
 // N => Node
-
+/*
 function findMernDevelopers(users) {
   const skillsRequired = ["MongoDB", "Express", "React", "Node"];
   const mernDevelopers = [];
@@ -50,3 +50,10 @@ function findMernDevelopers(users) {
 }
 
 console.log("MERN stack developers:", findMernDevelopers(users));
+*/
+
+// Task 4: Return the users that are MERN Stack developers using High Order Function -> Filter().
+const skillsRequired = ["MongoDB", "Express", "React", "Node"];
+const filteredUsers = Object.keys(users).filter(name => skillsRequired.every(skillRequired => users[name].skills.includes(skillRequired)));
+
+console.log("MERN stack developers:", filteredUsers);
