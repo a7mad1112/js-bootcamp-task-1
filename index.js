@@ -127,3 +127,8 @@ const findPersonMostSkills = function(users){
 }
 const mostSkilledPerson = findPersonMostSkills(arrayUsers);
 console.log(`The person with the most skills is: `, mostSkilledPerson);
+
+// Task 2: Count the number of logged-in users and users with points greater than or equal to 50, then print both counts.
+const loggedUsersCount = arrayUsers.reduce((acc, curr) => curr.isLoggedIn && curr.points >= 50 ? acc + 1 : acc, 0)
+console.log("Logged Person Count: " + loggedUsersCount)
+
